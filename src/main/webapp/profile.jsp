@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-
+    Welcome to your login home screen!
 </body>
 </html>

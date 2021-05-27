@@ -25,7 +25,19 @@
 <div>
     <p>username: ${param.username}</p>
     <p>password: ${param.password}</p>
+ <%
+     request.setAttribute("pwd", "password");
+     request.setAttribute("usr", "admin");
+ %>
 
+    <c:choose>
+        <c:when test="${param.username.equals(usr) && param.password.equals(pwd)}">
+            <jsp:forward page="profile.jsp" />
+        </c:when>
+        <c:otherwise>
+
+        </c:otherwise>
+    </c:choose>
 </div>
 
 </body>
