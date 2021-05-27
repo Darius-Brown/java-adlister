@@ -4,10 +4,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "HelloWorld", urlPatterns= "/hello")
-public class HelloWorldServlet extends HttpServlet {
+@WebServlet(name = "counter", urlPatterns = "/counter" )
+public class page_counter extends HttpServlet {
+
+    private int counter = 0;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    response.getWriter().println("<h1> Hello World </h1>");
+        counter += 1;
+
+        response.getWriter().println("<h3>the count is " + counter + " </h3>");
     }
 }
