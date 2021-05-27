@@ -1,0 +1,20 @@
+html {
+    background-color: #262626;
+    color: limegreen;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+}
+
+.space{
+    margin: 5px;
+    padding: 5px;
+}
+
+.ml {
+    margin-left: 15px;
+}
