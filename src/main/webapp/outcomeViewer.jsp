@@ -11,7 +11,7 @@
     <title>Outcome</title>
 </head>
 <body>
-<h1>you won!</h1>
-<h1>you lose!</h1>
+<%--${param.win}--%>
+<%--${param.lose}--%>
 </body>
 </html>

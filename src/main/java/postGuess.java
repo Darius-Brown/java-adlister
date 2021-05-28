@@ -14,7 +14,4 @@ public class postGuess extends HttpServlet {
 
         request.getRequestDispatcher("/guess_Controller.jsp").forward(request, response);
     }
-
-
-
 }
