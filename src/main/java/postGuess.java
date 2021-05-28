@@ -11,13 +11,16 @@ public class postGuess extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String userGuess = request.getParameter("userGuess");
         request.setAttribute("userGuess", userGuess);
-
+        if (userGuess.equals(3)){
+            response.sendRedirect("https://microsoft.com");
+        }
         request.getRequestDispatcher("/guess_Controller.jsp").forward(request, response);
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String userGuess = request.getParameter("userGuess");
         request.setAttribute("userGuess", userGuess);
+
 
         request.getRequestDispatcher("/guess_Controller.jsp").forward(request, response);
     }

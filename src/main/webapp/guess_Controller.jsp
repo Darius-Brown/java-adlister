@@ -18,5 +18,16 @@
     <button type="submit" id="submit">Submit</button>
 </form>
 <p>${param.userGuess}</p>
+<c:choose>
+    <c:when test="${param.userGuess.equals(3)}">
+        <jsp:forward page="http://localhost:8080/correct" />
+    </c:when>
+    <c:when test="${param.userGuess.equals(2)}">
+        <jsp:forward page="http://localhost:8080/incorrect" />
+    </c:when>
+    <c:otherwise>
+
+    </c:otherwise>
+</c:choose>
 </body>
 </html>
