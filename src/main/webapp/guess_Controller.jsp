@@ -15,7 +15,7 @@
 <h1>pick a number between 1 and 3</h1>
 <form method="post" action="http://localhost:8080/guess">
     <input type="text" id="userGuess" placeholder="Pick a number between 1 & 3" name="userGuess" required>
-    <button type="submit" id="submit">Login</button>
+    <button type="submit" id="submit">Submit</button>
 </form>
 <p>${param.userGuess}</p>
 </body>
