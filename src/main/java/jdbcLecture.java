@@ -9,26 +9,25 @@ public class jdbcLecture {
     public static void main(String[] args) throws SQLException {
 
         DriverManager.registerDriver(new Driver());
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/codeup_test_db?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true", "root","");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/codeup_test_db?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true", "super","codeup");
 
 
         Statement statement = connection.createStatement();
 
         //Example: Utilizing a SELECT
-        String selectQuery = "SELECT * FROM products";
+        String selectQuery = "SELECT * FROM albums";
 
         ResultSet selectResults = statement.executeQuery(selectQuery); //remember: casing extra important for entire time / code saved for long amounts of time
 
         while (selectResults.next()) { //WHILE there are rows that are NEXT. .
 
-            System.out.println("Here's a product:");
-            System.out.println("name : " + selectResults.getString("name")); //Talk to a column named 'name' that has a string
-            System.out.println("price: $" + selectResults.getInt("price") + "\n"); //Talk to a column named 'price' that has an int
+            System.out.println("Here's a album:");
+            System.out.println("artist : " + selectResults.getString("artist"));
         }
 
         //Example: INSERTION of new record + return of ID that was generated
 
-        String insertQuery = "INSERT INTO products (name, price) VALUES ('nailgun', 250)";
+        String insertQuery = "INSERT INTO albums (artist, name, release_date, genre, sales) VALUES ('Drake','Take Care', 2011, 'R&B', 1000 )";
 
         Statement insertStatement = connection.createStatement();
 

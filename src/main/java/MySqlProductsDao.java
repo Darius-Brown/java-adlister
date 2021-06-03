@@ -26,7 +26,7 @@ public class MySqlProductsDao implements Products {
     public List<Product> all() {
         try {
             Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM products");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM albums");
             return createProductsFromResults(rs);
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving all products.", e);
