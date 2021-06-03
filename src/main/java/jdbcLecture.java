@@ -9,7 +9,7 @@ public class jdbcLecture {
     public static void main(String[] args) throws SQLException {
 
         DriverManager.registerDriver(new Driver());
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/example_db?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true", "root", "codeup");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/codeup_test_db?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true", "root","");
 
 
         Statement statement = connection.createStatement();
